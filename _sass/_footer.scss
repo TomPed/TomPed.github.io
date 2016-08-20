@@ -1,0 +1,76 @@
+#facebook {
+  color: #3b5998;
+  transition: all .3s;
+  :hover {
+    color: #8b9dc3;
+    transition: all .3s;
+  }
+}
+
+#linkedin {
+  color: #0077b5;
+  transition: all .3s;
+  :hover {
+    color: #00a0dc;
+    transition: all .3s;
+  }
+}
+
+#twitter {
+  color: #00aced;
+  transition: all .3s;
+  :hover {
+    color: #66adff;
+    transition: all .3s;
+  }
+}
+
+#instagram {
+  color: #3f729b;
+  transition: all .3s;
+  :hover {
+    color: #428bca;
+    transition: all .3s;
+  }
+}
+
+#youtube {
+  color: #cd201f;
+  transition: all .3s;
+  :hover {
+    color: #e74c3c;
+    transition: all .3s;
+  }
+}
+
+#google-plus {
+  color: #dc4e41;
+  transition: all .3s;
+  :hover {
+    color: #f55247;
+    transition: all .3s;
+  }
+}
+
+#github {
+  color: #666666;
+  transition: all .3s;
+  :hover {
+    color: #999999;
+    transition: all .3s;
+  }
+}
+
+ul li {
+  display: inline;
+}
+
+li {
+  padding: 15px;
+
+}
+
+ul {
+  display:table; margin:0 auto;
+  padding-bottom: 45px;
+}

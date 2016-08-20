@@ -1,32 +1,47 @@
 <footer class="site-footer">
-
   <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
+      <ul>
+        {% if site.facebook_id %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-facebook.html id=site.facebook_id %}
           </li>
-          {% endif %}
+        {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+        {% if site.linkedin_id %}
+        <li>
+          {% include icon-linkedin.html id=site.linkedin_id %}
+        </li>
+        {% endif %}
 
+        {% if site.twitter_username %}
+        <li>
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+
+        {% if site.instagram_username %}
+        <li>
+          {% include icon-instagram.html username=site.instagram_username %}
+        </li>
+        {% endif %}
+
+        {% if site.youtube_channel %}
+        <li>
+          {% include icon-youtube.html channel=site.youtube_channel %}
+        </li>
+        {% endif %}
+
+        {% if site.google_plus_id %}
+        <li>
+          {% include icon-google-plus.html id=site.google_plus_id %}
+        </li>
+        {% endif %}
+
+        {% if site.github_username %}
+        <li>
+          {% include icon-github.html username=site.github_username %}
+        </li>
+        {% endif %}
+      </ul>
     </div>
-
-  </div>
-
 </footer>

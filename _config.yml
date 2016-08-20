@@ -19,8 +19,13 @@ description: > # this means to ignore newlines until "baseurl:"
   hey there
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tomped.github.io" # the base hostname & protocol for your site
+facebook_id: TommyPed
+linkedin_id: tpedbereznak
 twitter_username: tomped1
-github_username:  TomPed
+instagram_username: tomped_e
+youtube_channel: UCHUXOpIyLyKGkt1BCK-hw9g
+google_plus_id: TomPed
+github_username: TomPed
 
 # Build settings
 markdown: kramdown
