@@ -41,8 +41,97 @@ $on-laptop:        800px;
   }
 }
 
+#facebook {
+  color: #3b5998;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#facebook:hover {
+  color: #8b9dc3;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#linkedin {
+  color: #0077b5;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#linkedin:hover {
+  color: #00a0dc;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#twitter {
+  color: #00aced;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#twitter:hover {
+  color: #66adff;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#instagram {
+  color: #3f729b;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#instagram:hover {
+  color: #428bca;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#youtube {
+  color: #cd201f;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#youtube:hover {
+  color: #e74c3c;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#google-plus {
+  color: #dc4e41;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#google-plus:hover {
+  color: #f55247;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+#github {
+  color: #666666;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  transition: all .3s;
+}
+#github:hover {
+  color: #999999;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+ul li {
+  display: inline;
+}
+li {
+  padding: 15px;
+}
+ul {
+  display:table; margin:0 auto;
+  padding-bottom: 45px;
+}
+
 @import
 "base",
+"footer",
 "layout",
 "syntax-highlighting"
 ;
