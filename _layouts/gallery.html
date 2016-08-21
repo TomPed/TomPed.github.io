@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<div class="page-content">
+    <div class="wrapper">
+        <ul>
+            {% for image in page.images %}
+                <li><a href="{{ image.high_res_path }}"><img src="{{ image.image_path }}" alt="{{ image.title }}"></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% include footer.html %}
+
+</body>
+
+</html>
