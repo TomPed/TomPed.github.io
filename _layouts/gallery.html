@@ -11,7 +11,7 @@
     <div class="wrapper">
         <ul>
             {% for image in page.images %}
-                <li><img src="{{ image.image_path }}" alt="{{ image.title }}"></li>
+                <li><a href="{{ image.high_res_path }}"><img src="{{ image.image_path }}" alt="{{ image.title }}"></a></li>
             {% endfor %}
         </ul>
     </div>
