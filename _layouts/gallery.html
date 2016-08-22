@@ -9,18 +9,17 @@
 
 <div class="page-content">
     <div class="wrapper">
-        <div id="list">
+        <ul id="rig">
         {% for image in page.images %}
-            <a id="test" href="{{ image.high_res_path }}">
-                <figure>
-                    <img src="{{ image.image_path }}" alt="">
-                    <figcaption>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                    </figcaption>
-                </figure>
-            </a>
+            <li>
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" src="{{ image.image_path }}">
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Lorem Ipsum Dolor</span>
+                </a>
+            </li>
         {% endfor %}
-        </div>
+        </ul>
     </div>
 </div>
 
