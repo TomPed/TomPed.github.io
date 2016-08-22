@@ -12,10 +12,10 @@
         <ul id="rig">
         {% for image in page.images %}
             <li>
-                <a class="rig-cell" href="#">
+                <a class="rig-cell" href="{{ image.high_res_path }}">
                     <img class="rig-img" src="{{ image.image_path }}">
                     <span class="rig-overlay"></span>
-                    <span class="rig-text">Lorem Ipsum Dolor</span>
+                    <span class="rig-text">{{ image.title }}</span>
                 </a>
             </li>
         {% endfor %}
