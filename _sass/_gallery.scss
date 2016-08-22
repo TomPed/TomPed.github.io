@@ -1,6 +1,6 @@
 #rig {
   max-width:900px;
-  margin:0 auto; /*center aligned*/
+  margin: $spacing-unit auto 0;
   padding:0;
   font-size:0; /* Remember to change it back to normal font size if have captions */
   list-style:none;
