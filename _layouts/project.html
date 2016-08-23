@@ -9,7 +9,19 @@
 
 <div class="page-content">
     <div class="wrapper">
-        {{ content }}
+        <div class="projects">
+
+            <ul class="project-list">
+                {% for project in site.projects reversed %}
+                <li>
+                    <h2>
+                        <a href="{{ project.link }}"> {{ project.title }}</a>
+                    </h2>
+                    {{ project.excerpt }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
 
