@@ -16,7 +16,7 @@
 title: Thomas Pedbereznak
 email: tomped123456789@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  hey there
+  A personal website for Thomas Pedbereznak (Tom Ped).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tomped.github.io" # the base hostname & protocol for your site
 facebook_id: TommyPed
