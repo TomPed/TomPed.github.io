@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: project
 title:  Miscord
 link: https://github.com/TomPed/miscord
 ---

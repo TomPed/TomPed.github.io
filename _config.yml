@@ -28,7 +28,7 @@ google_plus_id: TomPed
 github_username: TomPed
 
 collections:
-  - work
+  - projects
 
 # Build settings
 markdown: kramdown

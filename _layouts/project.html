@@ -11,7 +11,7 @@
     <div class="wrapper">
         {{ content }}
         <ul class="project-list">
-            {% for project in site.work reversed %}
+            {% for project in site.projects reversed %}
             <li>
                 <h2>
                     <a href="{{ project.link }}"> {{ project.title }}</a>
