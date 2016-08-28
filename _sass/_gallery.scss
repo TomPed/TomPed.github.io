@@ -2,7 +2,6 @@
   max-width:900px;
   margin: $spacing-unit auto 0;
   padding:0;
-  font-size:0; /* Remember to change it back to normal font size if have captions */
   list-style:none;
   background-color:#666;
 }
@@ -48,7 +47,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
-  background: #3DC0F1 url(../assets/link.png) no-repeat center 20%;
+  background: #A71136;
   background-size:50px 50px;
   opacity:0;
   filter:alpha(opacity=0);/*For IE6 - IE8*/
@@ -67,11 +66,7 @@
   left:0;
   width:100%;
   text-align:center;
-  text-transform:capitalize;
-  font-size:18px;
-  font-weight:bold;
-  font-weight:normal!important;
-  top:40%;
+  top: 30%;
   color:white;
   opacity:0;
   filter:alpha(opacity=0);/*For older IE*/
