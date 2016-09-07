@@ -15,10 +15,7 @@
   padding:0;
 }
 
-/* The wrapper for each item */
 .rig-cell {
-  /*margin:12px;
-  box-shadow:0 0 6px rgba(0,0,0,0.3);*/
   display:block;
   position: relative;
   overflow:hidden;
@@ -38,7 +35,6 @@
   transform:scale(1.05);
 }
 
-/* If have the overlay layer */
 .rig-overlay {
   position: absolute;
   display:block;
@@ -57,7 +53,6 @@
   opacity:0.8;
 }
 
-/* If have captions */
 .rig-text {
   display:block;
   padding:0 30px;

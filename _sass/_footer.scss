@@ -1,63 +1,36 @@
 #facebook {
-  color: #3b5998;
-  transition: all .3s;
   :hover {
-    color: #8b9dc3;
-    transition: all .3s;
+    fill: #3b5998;
   }
 }
 
 #linkedin {
-  color: #0077b5;
-  transition: all .3s;
   :hover {
-    color: #00a0dc;
-    transition: all .3s;
+    fill: #0077b5;
   }
 }
 
 #twitter {
-  color: #00aced;
-  transition: all .3s;
   :hover {
-    color: #66adff;
-    transition: all .3s;
+    fill: #1da1f2;
   }
 }
 
 #instagram {
-  color: #3f729b;
-  transition: all .3s;
   :hover {
-    color: #428bca;
-    transition: all .3s;
+    fill: #833ab4;
   }
 }
 
 #youtube {
-  color: #cd201f;
-  transition: all .3s;
   :hover {
-    color: #e74c3c;
-    transition: all .3s;
-  }
-}
-
-#google-plus {
-  color: #dc4e41;
-  transition: all .3s;
-  :hover {
-    color: #f55247;
-    transition: all .3s;
+    fill: #cd201f;
   }
 }
 
 #github {
-  color: #666666;
-  transition: all .3s;
   :hover {
-    color: #999999;
-    transition: all .3s;
+    fill: #666666;
   }
 }
 
@@ -73,4 +46,12 @@ li {
 ul {
   display:table; margin:0 auto;
   padding-bottom: 45px;
+  a:hover {
+    text-decoration: none;
+  }
+  svg {
+    fill: #333;
+    width: 45px;
+    height: 45px;
+  }
 }
