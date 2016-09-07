@@ -16,5 +16,7 @@ github_username: TomPed
 collections:
   - work
 
-# Build settings
+sass:
+    style: compressed
+
 markdown: kramdown
