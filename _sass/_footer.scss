@@ -1,24 +1,24 @@
 #facebook {
   :hover {
-    fill: #3b5998;
+    fill: #3B5998;
   }
 }
 
 #linkedin {
   :hover {
-    fill: #0077b5;
+    fill: #0077B5;
   }
 }
 
 #twitter {
   :hover {
-    fill: #1da1f2;
+    fill: #1DA1F2;
   }
 }
 
 #instagram {
   :hover {
-    fill: #833ab4;
+    fill: #833AB4;
   }
 }
 
@@ -30,7 +30,7 @@
 
 #github {
   :hover {
-    fill: #666666;
+    fill: #666;
   }
 }
 
@@ -40,17 +40,18 @@ ul li {
 
 li {
   padding: 15px;
-
 }
 
 ul {
   display:table; margin:0 auto;
   padding-bottom: 45px;
+
   a:hover {
     text-decoration: none;
   }
+
   svg {
-    fill: #333;
+    fill: $text-color;
     width: 45px;
     height: 45px;
   }

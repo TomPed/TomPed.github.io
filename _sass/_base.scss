@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -25,8 +23,6 @@ body {
   font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -37,8 +33,6 @@ ul, ol, dl, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -46,8 +40,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -59,8 +51,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -76,17 +66,25 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
-  color: #666666;
+  color: $text-color;
 }
 
+h1 {
+  font-size: 100px;
+}
 
+h2 {
+  font-size: 80px;
+}
+
+h3, h4, h5, h6 {
+  color: #666;
+}
 
 /**
  * Links
@@ -104,54 +102,6 @@ a {
     text-decoration: underline;
   }
 }
-
-
-
-/**
- * Blockquotes
- */
-blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
-  font-style: italic;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-
 
 /**
  * Wrapper
@@ -173,8 +123,6 @@ pre {
   }
 }
 
-
-
 /**
  * Clearfix
  */
@@ -183,8 +131,6 @@ pre {
   display: table;
   clear: both;
 }
-
-
 
 /**
  * Icons
