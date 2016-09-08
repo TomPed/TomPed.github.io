@@ -42,12 +42,11 @@ li {
   padding: 15px;
 }
 
-ul {
+ul#footer {
   display:table; margin:0 auto;
-  padding-bottom: 45px;
 
   a:hover {
-    text-decoration: none;
+     text-decoration: none;
   }
 
   svg {
