@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/tomped
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tomped.com
+  * I am tomped (https://keybase.io/tomped) on keybase.
+  * I have a public key with fingerprint 99D5 1F69 6CEF A3BA 7DA4  B440 B410 404D 3A31 B569
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101fc937fda75f082a7771f1c74a55895037cc7650bc486dedfb0da7634ad6d92080a",
+            "fingerprint": "99d51f696cefa3ba7da4b440b410404d3a31b569",
+            "host": "keybase.io",
+            "key_id": "b410404d3a31b569",
+            "kid": "0101fc937fda75f082a7771f1c74a55895037cc7650bc486dedfb0da7634ad6d92080a",
+            "uid": "3c1a7f630b18c5c42221c59ea4416c19",
+            "username": "tomped"
+        },
+        "service": {
+            "hostname": "tomped.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1486749780,
+    "expire_in": 157680000,
+    "prev": "dfb58789ca520ec2d9c7c8d8d6c8dd3d5ca45e386f6f0957255e7590dd113ad2",
+    "seqno": 16,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMIiAnicrVJbSBVBGD6aGR6SLClKKGu1qyIzuzs7uxYESYkQhNGDgXiYnZnV1ePZ
+0zl7jlpJVHAKLLuHBZUSWgkl9ZBUUlkihCKWDz1IEl3oZnSjIixqVuoh6LF5mGH+
++b7v/76f6Uuf4vMnLeh5vvndgYtm0kDvkZiv7LRv0zbJdFiDVLhNquGTBw8yHnUD
+NTaTCiUAAbSooWCLEYwsoMsEYwwtSLFKENINBBRMKdYQMKmqa4wzywQCqykqYRoz
+ZKADIuVLlh2q5JFwxA65QtYwGIKWZmiUW0QxCWZENVUVmCoEKlCZQhRoIs0QxCon
+6jGEOZNEeYHtiJq4BCbt/QP/n33HJuUUCgm2NAWYUKeIqrIsQ4oMTlQVahR6fWNR
+HgmRWi7QrlMb5kxqzJdELW5T7o3Vy/HXewF1agUvHHFchzpBUa9y3XChR3Mbwh6u
+jpuB3woB0w4xMUJBiPNI1HZCUiEUSOraniQUEbBqYB3kS7w+bEd4wPYQCGs6EMtr
+w+NCUqREOtYNSpAMOJWZQTHVmc40sTOFIUpUxBVdszQLGAjLCHGMDMAYhAphsuRl
+2hJyhLYmfJJKoRm1K0PEjUW41HjndnmKL8nvS52a7P0tnz8t48+PW3dw2o9ZF85L
+E/F9V18MVex/t/PL7vSw09KXlVTc3r0nMZGbQ4LBMy0lP1917di6cnktqCu9oDeX
+6q3Zzf1ns+p/2mOZidR7/Ymj397Oe90zPzn32cBH3NG+qIVf/9xX8iCns057WWIm
+Lt86NZ41uDaj+uT4irS8o77M4eMjX/s/0EelS0ar2fsZxzsL0i7lVSxuuznUHTMe
+dx1uHLhxrmxjyrreJmit3xvLpGM4b3BVvLNi4cT3yy+39z6/4Vvx9Mrqhx3DxalD
+b6+tnj47UZcR1uH2nF3dMzeMpDbMPdS+pvjHpyNFPdeLHo72NC07cbch+9gyf9ue
+zKX3ylvfzAncV9V87UlT/S/Ylj/v
+=VoSL
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tomped
+
+==================================================================
