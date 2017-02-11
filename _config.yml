@@ -21,4 +21,4 @@ sass:
 
 markdown: kramdown
 
-include: ["keybase.txt"]
+include: ["keybase.txt", "highlight.pack.js"]
