@@ -8,23 +8,31 @@
 {% include header.html %}
 
 <div class="page-content">
-    <div class="wrapper">
-        {{ content }}
-        <ul class="project-list">
-            {% for project in site.work %}
-            <li>
-                <h2 style="font-size: 50px">
-                    <a href="{{ project.link }}"> {{ project.title }}</a>
-                </h2>
-                {{ project.excerpt }}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+  <div class="wrapper">
+
+    {{ content }}
+
+    <ul class="project-list">
+
+      {% for project in site.work %}
+
+      <li>
+        <h2 style="font-size: 50px">
+
+          <a href="{{ project.link }}"> {{ project.title }}</a>
+
+        </h2>
+        {{ project.excerpt }}
+
+      </li>
+
+      {% endfor %}
+
+    </ul>
+  </div>
 </div>
 
 {% include footer.html %}
 
 </body>
-
 </html>
