@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  Clustering
+title: Clustering
 link: https://github.com/TomPed/clustering
 ---
 

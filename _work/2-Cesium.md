@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  Cesium
+title: Cesium
 link: http://cesiumjs.org/
 ---
 

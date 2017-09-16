@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  Miscord
+title: Miscord
 link: https://github.com/TomPed/miscord
 ---
 

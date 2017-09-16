@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  Jump Source Spec
+title: Jump Source Spec
 link: https://plugins.jetbrains.com/plugin/8391?pr=idea
 ---
 

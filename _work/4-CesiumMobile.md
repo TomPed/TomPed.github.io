@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  Cesium Mobile
+title: Cesium Mobile
 link: https://github.com/TomPed/Cesium-Mobile
 ---
 
