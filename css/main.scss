@@ -14,9 +14,9 @@ $base-line-height: 1.75;
 
 $spacing-unit:     30px;
 
-$text-color:       #657b83;
-$background-color: #fdf6e3;
-$brand-color:      #e81c4f;
+$text-color:       #f8f8f2;
+$background-color: #282a36;
+$brand-color:      #bd93f9;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -44,7 +44,6 @@ $on-laptop:        800px;
 @import
 "base",
 "footer",
-"gallery",
 "layout",
 "code-style"
 ;
