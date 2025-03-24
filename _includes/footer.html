@@ -1,36 +1,11 @@
 <footer class="site-footer">
   <div class="wrapper">
     <ul id="footer">
-      {% if site.facebook_id %}
-      <li>
-        {% include icon-facebook.html id=site.facebook_id %}
-      </li>
-      {% endif %}
-
       {% if site.linkedin_id %}
       <li>
         {% include icon-linkedin.html id=site.linkedin_id %}
       </li>
       {% endif %}
-
-      {% if site.twitter_username %}
-      <li>
-        {% include icon-twitter.html username=site.twitter_username %}
-      </li>
-      {% endif %}
-
-      {% if site.instagram_username %}
-      <li>
-        {% include icon-instagram.html username=site.instagram_username %}
-      </li>
-      {% endif %}
-
-      {% if site.youtube_channel %}
-      <li>
-        {% include icon-youtube.html channel=site.youtube_channel %}
-      </li>
-      {% endif %}
-
       {% if site.github_username %}
       <li>
         {% include icon-github.html username=site.github_username %}
