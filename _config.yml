@@ -1,16 +1,11 @@
 title: Thomas Pedbereznak
-email: tomped123456789@gmail.com
+# email:
 description: >
   A personal website for Thomas Pedbereznak (Tom Ped).
 baseurl: ""
 permalink: /404.html
 url: "http://tomped.com"
-facebook_id: TommyPed
 linkedin_id: tpedbereznak
-twitter_username: tomped1
-instagram_username: thomas.ped
-youtube_channel: UCHUXOpIyLyKGkt1BCK-hw9g
-google_plus_id: TomPed
 github_username: TomPed
 
 collections:
@@ -21,4 +16,4 @@ sass:
 
 markdown: kramdown
 
-include: ["keybase.txt", "js/highlight.pack.js"]
+include: ["js/highlight.pack.js"]
