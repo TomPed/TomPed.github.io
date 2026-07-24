@@ -1,9 +1,62 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@use "base";
-@use "footer";
-@use "layout";
-@use "landing";
-@use "resume";
-@use "studio";
+@charset "utf-8";
+
+// NOTE: GitHub Pages builds with libsass, which does NOT support `@use` / the
+// Sass module system. Keep this file on classic `@import` + global variables.
+
+// Type
+$base-font-family: monospace;
+$base-font-size:   22px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.75;
+
+$spacing-unit:     30px;
+
+// Core palette
+$text-color:       #f8f8f2;
+$background-color: #282a36;
+$brand-color:      #bd93f9;
+
+// Extended Dracula palette
+$dracula-current:  #44475a;
+$dracula-comment:  #6272a4;
+$dracula-cyan:     #8be9fd;
+$dracula-green:    #50fa7b;
+$dracula-pink:     #ff79c6;
+$dracula-yellow:   #f1fa8c;
+
+// Elevation — raised cards floating on the dark canvas
+$surface-color:    #313342;
+$shadow-raised:    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+                   0 10px 30px rgba(0, 0, 0, 0.45),
+                   0 2px 8px rgba(0, 0, 0, 0.35);
+$shadow-hover:     0 1px 0 rgba(255, 255, 255, 0.06) inset,
+                   0 18px 44px rgba(0, 0, 0, 0.55),
+                   0 4px 12px rgba(0, 0, 0, 0.4);
+$radius:           10px;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$content-width:    1000px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@import
+"base",
+"footer",
+"layout",
+"landing",
+"resume",
+"studio"
+;
