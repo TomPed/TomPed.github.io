@@ -145,6 +145,25 @@ body.studio {
   }
 }
 
+/* "Coming soon" demos — dimmed, not clickable, ribboned */
+.site-card.is-soon {
+  opacity: 0.55;
+  cursor: default;
+
+  &:hover { transform: none; box-shadow: $shadow-raised; }  // cancel the lift
+}
+
+.soon-ribbon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: $dracula-yellow;
+}
+
 /* Closing CTA */
 .studio-cta {
   text-align: center;
