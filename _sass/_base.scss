@@ -1,11 +1,29 @@
 /**
  * Reset some basic elements
  */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
+}
+
+/* Long code / tree blocks scroll within themselves instead of the page */
+pre {
+  overflow-x: auto;
+}
+
+/* Break overly long words rather than overflow the viewport */
+p, h1, h2, h3, li, a {
+  overflow-wrap: break-word;
 }
 
 /**
@@ -130,6 +148,106 @@ a {
   content: "";
   display: table;
   clear: both;
+}
+
+/**
+ * Elevated card — raised surface with soft layered shadow.
+ * Shared across sections; sections tune padding/spacing themselves.
+ */
+%card {
+  background-color: $surface-color;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: $radius;
+  box-shadow: $shadow-raised;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+%card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: $shadow-hover;
+}
+
+/**
+ * Quiet vertical accent — a thin spine running down a section.
+ * Apply to a container; children sit to the right of the line.
+ */
+%spine {
+  position: relative;
+  padding-left: $spacing-unit;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba($brand-color, 0),
+      rgba($brand-color, 0.5) 12%,
+      rgba($brand-color, 0.5) 88%,
+      rgba($brand-color, 0)
+    );
+    border-radius: 2px;
+  }
+}
+
+/**
+ * Section header + breadcrumb (shared by resume/ and studio/)
+ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($background-color, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: $spacing-unit * 0.6;
+}
+
+.crumb {
+  font-size: 14px;
+  margin-bottom: 3px;
+
+  .crumb-link {
+    text-decoration: none;
+
+    .crumb-cmd  { color: $dracula-green; }
+    .crumb-path { color: $dracula-comment; }
+
+    &:hover .crumb-cmd,
+    &:hover .crumb-path { color: $text-color; }
+  }
+}
+
+/* Brand bar (shared by resume/ and studio/): wordmark + a CTA link */
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-wordmark {
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-color;
+  text-decoration: none;
+
+  .brand-dir { color: $brand-color; }
+  &:hover { color: $text-color; }
+}
+
+.brand-cta-link {
+  color: $dracula-green;
+  text-decoration: none;
+  font-size: 15px;
+  &:hover { color: $text-color; }
 }
 
 /**

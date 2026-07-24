@@ -3,32 +3,21 @@
 
 {% include head.html %}
 
-<body>
+<body class="resume">
 
-{% include header.html %}
+{% include resume-header.html %}
 
 <div class="page-content">
   <div class="wrapper">
-
-    {{ content }}
-
-    <ul class="project-list">
-
-      {% for project in site.work %}
-
-      <li>
-        <h2 style="font-size: 50px">
-
-          <a href="{{ project.link }}"> {{ project.title }}</a>
-
-        </h2>
-        {{ project.excerpt }}
-
-      </li>
-
-      {% endfor %}
-
-    </ul>
+    <article class="rune spine">
+      <h1 class="project-title">
+        {% if page.link %}<a href="{{ page.link }}">{{ page.title }}</a>{% else %}{{ page.title }}{% endif %}
+      </h1>
+      <div class="rune-body card">
+        {{ content }}
+      </div>
+      <p class="rune-lead"><a href="{{ site.baseurl }}/resume/">← back to resume</a></p>
+    </article>
   </div>
 </div>
 

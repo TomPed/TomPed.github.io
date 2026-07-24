@@ -18,6 +18,24 @@ $text-color:       #f8f8f2;
 $background-color: #282a36;
 $brand-color:      #bd93f9;
 
+// Extended Dracula palette
+$dracula-current:  #44475a;  // "current line" — raised surfaces
+$dracula-comment:  #6272a4;  // muted text
+$dracula-cyan:     #8be9fd;
+$dracula-green:    #50fa7b;
+$dracula-pink:     #ff79c6;
+$dracula-yellow:   #f1fa8c;
+
+// Elevation — raised cards floating on the dark canvas
+$surface-color:    #313342;  // slightly above the page background
+$shadow-raised:    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+                   0 10px 30px rgba(0, 0, 0, 0.45),
+                   0 2px 8px rgba(0, 0, 0, 0.35);
+$shadow-hover:     0 1px 0 rgba(255, 255, 255, 0.06) inset,
+                   0 18px 44px rgba(0, 0, 0, 0.55),
+                   0 4px 12px rgba(0, 0, 0, 0.4);
+$radius:           10px;
+
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -45,5 +63,8 @@ $on-laptop:        800px;
 "base",
 "footer",
 "layout",
-"code-style"
+"code-style",
+"landing",
+"resume",
+"studio"
 ;

@@ -9,7 +9,10 @@ linkedin_id: tpedbereznak
 github_username: TomPed
 
 collections:
-  - work
+  work:
+    output: true
+  sites:
+    output: false
 
 sass:
     style: compressed

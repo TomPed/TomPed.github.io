@@ -3,9 +3,8 @@
  */
 .site-header {
   min-height: 56px;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  // NOTE: sticky positioning is defined in _base.scss; don't set `position` here
+  // or it overrides the sticky header (this partial is imported after _base).
 }
 
 .site-title {
@@ -163,6 +162,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  overflow-x: clip;   // horizontal-overflow guard here (not on <body>) so the sticky header still works
 }
 
 .page-heading {

@@ -1,0 +1,108 @@
+/* Landing — terminal tree chooser */
+
+body.landing {
+  .page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+.terminal {
+  @extend %card;
+  max-width: 760px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #21222c;   // deeper than the page for a "window" feel
+
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background-color: $dracula-current;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .tb-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .tb-red    { background: #ff5f56; }
+  .tb-yellow { background: #ffbd2e; }
+  .tb-green  { background: #27c93f; }
+
+  .terminal-title {
+    margin-left: 10px;
+    font-size: 14px;
+    color: $dracula-comment;
+  }
+
+  .terminal-body {
+    padding: $spacing-unit;
+    font-size: 19px;      // larger base for the non-link text
+    font-weight: 400;     // lighter, friendlier
+    line-height: 1.7;
+  }
+}
+
+.prompt-line {
+  margin-bottom: $spacing-unit / 2;
+
+  .prompt { color: $dracula-green; }
+  .path   { color: $dracula-cyan; margin: 0 0.5ch; }
+  .sigil  { color: $dracula-pink; margin-right: 0.5ch; }
+}
+
+.tree {
+  margin: ($spacing-unit / 2) 0 $spacing-unit;
+  overflow-x: auto;
+
+  // "tomped/" root — large but light (folders stay bold, so they still dominate)
+  .tree-root { color: $text-color; font-weight: 400; font-size: 1.5em; display: inline-block; margin-bottom: 4px; }
+
+  .tree-row {
+    display: block;
+    color: $dracula-comment;              // glyphs muted
+    text-decoration: none;
+    padding: 12px 14px;                   // roomy, obvious click targets
+    border-radius: 8px;
+    line-height: 1.4;
+    transition: background 0.15s ease, transform 0.15s ease;
+
+    // the folder name is the primary click target — ~1.5x the body text
+    .dir     { color: $brand-color; font-weight: 700; font-size: 1.5em; }
+    .comment { color: $dracula-comment; font-size: 0.85em; }  // secondary, small
+    .arrow   { color: $dracula-green; font-size: 1.4em; opacity: 0.4; transition: opacity 0.15s ease; }
+
+    &:hover,
+    &:focus {
+      background: rgba($brand-color, 0.12);
+      transform: translateX(4px);
+      outline: none;
+
+      .dir     { color: $text-color; text-decoration: underline; }
+      .arrow   { opacity: 1; }
+    }
+  }
+}
+
+.tree-summary {
+  margin: 0;
+  color: $dracula-comment;
+  font-size: 17px;
+
+  .blink { color: $dracula-yellow; }
+}
+
+@include media-query($on-palm) {
+  .terminal .terminal-body { font-size: 16px; padding: $spacing-unit / 2; }
+  .tree .tree-row .comment { display: none; }  // keep the tree tidy on small screens
+}

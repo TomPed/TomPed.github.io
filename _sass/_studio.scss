@@ -1,0 +1,155 @@
+/* Studio side — freelance / for clients.
+   Same Dracula bones, but a lighter, product-landing structure and voice. */
+
+body.studio {
+  .card { @extend %card; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: $radius;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+
+  &:hover { transform: translateY(-2px); }
+}
+.btn-primary {
+  background: $brand-color;
+  color: #21222c;
+  box-shadow: 0 8px 20px rgba($brand-color, 0.35);
+  &:hover { color: #21222c; box-shadow: 0 12px 26px rgba($brand-color, 0.5); }
+}
+.btn-ghost {
+  color: $text-color;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  &:hover { color: $text-color; border-color: $brand-color; }
+}
+
+/* Hero */
+.studio-hero {
+  padding: ($spacing-unit * 1.5) 0 ($spacing-unit * 2);
+
+  .hero-comment {
+    color: $dracula-comment;
+    margin-bottom: $spacing-unit / 2;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: $spacing-unit / 2;
+    .accent { color: $brand-color; }
+
+    @include media-query($on-laptop) { font-size: 40px; }
+    @include media-query($on-palm)   { font-size: 32px; }
+  }
+  .hero-sub {
+    max-width: 620px;
+    color: #d7d7e0;
+    margin-bottom: $spacing-unit;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+}
+
+/* Section scaffolding */
+.studio-section {
+  margin-bottom: $spacing-unit * 2;
+
+  &.spine { @extend %spine; }
+}
+.section-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: $spacing-unit;
+}
+
+/* Process steps */
+.process {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-unit / 2;
+
+  @include media-query($on-laptop) { grid-template-columns: 1fr; }
+
+  .process-step {
+    @extend %card-lift;
+    padding: $spacing-unit;
+
+    .step-num {
+      display: block;
+      font-size: 15px;
+      color: $brand-color;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    h3 { font-size: 24px; font-weight: bold; margin-bottom: 8px; }
+    p  { color: #cfcfda; margin-bottom: 0; }
+  }
+}
+
+/* Portfolio gallery */
+.site-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-unit / 2;
+
+  @include media-query($on-laptop) { grid-template-columns: repeat(2, 1fr); }
+  @include media-query($on-palm)   { grid-template-columns: 1fr; }
+}
+.site-card {
+  @extend %card-lift;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  .site-thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, $dracula-current, #21222c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img { width: 100%; height: 100%; object-fit: cover; }
+
+    .thumb-mark {
+      font-size: 64px;
+      font-weight: bold;
+      color: rgba($brand-color, 0.55);
+    }
+    .site-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.45);
+      color: $dracula-cyan;
+    }
+  }
+
+  .site-meta {
+    padding: $spacing-unit / 2 $spacing-unit;
+    .site-name { font-size: 22px; font-weight: bold; margin-bottom: 6px; color: $text-color; }
+    p { font-size: 16px; color: #cfcfda; margin-bottom: 0; }
+  }
+}
+
+/* Closing CTA */
+.studio-cta {
+  text-align: center;
+  padding: ($spacing-unit * 1.5) $spacing-unit;
+
+  .cta-title { font-size: 32px; font-weight: bold; margin-bottom: 8px; }
+  .cta-sub   { color: #cfcfda; margin-bottom: $spacing-unit; }
+
+  @include media-query($on-palm) { .cta-title { font-size: 26px; } }
+}
