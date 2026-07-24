@@ -247,6 +247,7 @@ a {
   color: $dracula-green;
   text-decoration: none;
   font-size: 15px;
+  &:visited { color: $dracula-green; }   // don't inherit the darkened a:visited brand color
   &:hover { color: $text-color; }
 }
 

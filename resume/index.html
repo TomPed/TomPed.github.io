@@ -4,63 +4,115 @@ title: resume
 ---
 
 <pre><code class="javascript">const me = {
-  name: 'Tom Ped',
-  age: 29,
+  name: 'Thomas Pedbereznak',
+  role: 'Senior Software Engineer',
+  age: 30,
   location: 'Seattle, WA',
-  workExperience: '>6 years',
-  college: 'Northeastern University',
-  major: 'Computer Science',
-  minor: 'Mathematics'
+  education: 'BS Computer Science — Northeastern (magna cum laude)',
+  focus: ['data platforms', 'developer experience'],
+  status: 'open to new roles'
 }</code></pre>
 
 <section class="rune spine">
-  <pre><code class="javascript console-log">console.log(me.bio);</code></pre>
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">summary</span><span class="paren">()</span></p>
   <div class="rune-body card">
     <p>
-      Hi, I’m Tom — a senior software engineer who thrives at the intersection of clean code, data scalability, and developer experience. With 6+ years of experience in enterprise software, I've led projects that modernized data architectures, automated developer workflows, and saved millions in infrastructure costs.
-    </p>
-    <p>
-      At Intuit, I re-architected core systems to transition from legacy data platforms to S3-based lakes, created tools like Testable to boost developer productivity, and enhanced deployment pipelines that improved iteration speed and reliability. I care deeply about testing excellence, scalable design, and quality at every layer.
-    </p>
-    <p>
-      Whether I’m mentoring junior engineers or optimizing CI/CD pipelines, I bring a balance of hands-on technical skill and big-picture thinking. I'm currently looking for my next opportunity to build impactful systems, improve developer experiences, and continue growing alongside a great team.
+      Senior software engineer with 6+ years in enterprise software, focused on data platforms and
+      developer experience. I've led a seven-figure data-lake migration, shipped internal tools used
+      by 100+ people, and tuned Spark pipelines from hours to minutes — balancing hands-on
+      engineering with mentorship and clear stakeholder communication.
     </p>
   </div>
 </section>
 
 <section class="rune spine">
-  <pre><code class="javascript console-log">console.log(me.experience);</code></pre>
-  <div class="rune-body card">
-    <p>
-      For more information about my knowledge and technical skills checkout my
-      <a href="{{ site.baseurl }}/assets/resume.pdf">résumé</a> (PDF). If you'd like to know a bit
-      more feel free to send me an email at: tom [at] tomped [dot] com
-    </p>
-  </div>
-</section>
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">skills</span><span class="paren">()</span></p>
 
-<section class="rune spine">
-  <pre><code class="javascript console-log">console.log(me.projects);</code></pre>
-  <p class="rune-lead">Some of what I've built — at work and on my own time.</p>
-
-  <div class="project-list">
-    {% for project in site.work %}
-    <div class="project-card card">
-      <h2 class="project-title">
-        <a href="{{ project.link }}">{{ project.title }}</a>
-      </h2>
-      {{ project.excerpt }}
+  <div class="skills-grid card">
+    <div class="skill-group">
+      <h4 class="skill-title">Programming</h4>
+      <div class="tags">
+        <span class="tag">Scala</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">SQL</span>
+      </div>
     </div>
-    {% endfor %}
+    <div class="skill-group">
+      <h4 class="skill-title">Big Data &amp; Cloud</h4>
+      <div class="tags">
+        <span class="tag">Spark</span><span class="tag">Apache Iceberg</span><span class="tag">AWS S3</span><span class="tag">EMR</span><span class="tag">Glue</span><span class="tag">Lambda</span><span class="tag">IAM</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4 class="skill-title">Testing &amp; DevOps</h4>
+      <div class="tags">
+        <span class="tag">CI/CD</span><span class="tag">pytest</span><span class="tag">ScalaTest</span><span class="tag">Terraform</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="rune spine">
-  <pre><code class="javascript console-log">console.log(me.interests);</code></pre>
-  <div class="rune-body card">
-    <p>
-      Aside from work there are a few things I enjoy doing in my free time: music production,
-      playing music, hiking, astronomy, video games, and tinkering.
-    </p>
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">experience</span><span class="paren">()</span></p>
+  <p class="exp-note">
+    Full history in my <a href="{{ site.baseurl }}/assets/resume.pdf" download>résumé&nbsp;↓</a> — below is a summary of key points.
+  </p>
+
+  <div class="highlights card">
+    <div class="hl-item">
+      <span class="hl-tag">Enterprise · Intuit</span>
+      <p>Led the Vertica → S3 data-lake migration — saved seven figures with data parity and zero downtime.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Data · Intuit</span>
+      <p>Owned 5+ Spark/EMR pipelines and built a TurboTax abandonment pipeline surfacing user drop-off.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Tooling · Intuit</span>
+      <p>Shipped the CPA Tool (Electron) to 100+ users with zero P0/P1s, and built Testable for secure test data.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">DevEx · Intuit</span>
+      <p>Enhanced DBDeploy with dataset-level deployments and standardized CI/CD across projects.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Leadership · Intuit</span>
+      <p>Mentored engineers and drove Spark performance wins, cutting job runtimes from hours to minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rune spine">
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">relatedWork</span><span class="paren">()</span></p>
+
+  <div class="exp-entry card">
+    <div class="exp-meta">
+      <h3 class="exp-company">Deadlake</h3>
+      <ul class="exp-roles">
+        <li>Data Engineering <span class="exp-date">2025 – Present</span></li>
+      </ul>
+    </div>
+    <div class="exp-body">
+      <ul class="exp-bullets">
+        <li>Built a data lakehouse for Deadlock (a competitive team game) using Scala, Spark, and Apache Iceberg on AWS S3/Glue.</li>
+        <li>Designed typed ETL pipelines with incremental upserts, partitioning, and watermark tracking for reliable reprocessing via Iceberg metadata.</li>
+        <li>Optimized performance through Spark tuning, partition pruning, and broadcast joins.</li>
+        <li>Managed infrastructure as code with Terraform (S3 buckets, IAM roles, Glue jobs), enabling hero- and item-level dashboards from match-level facts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-entry card">
+    <div class="exp-meta">
+      <h3 class="exp-company">DeadStats</h3>
+      <ul class="exp-roles">
+        <li>Real-time analytics <span class="exp-date">2025 – Present</span></li>
+      </ul>
+    </div>
+    <div class="exp-body">
+      <ul class="exp-bullets">
+        <li>Real-time display of key value indicators for a competitive game, updating live as matches unfold.</li>
+        <li>Live outcome / win-probability predictions surfaced alongside the KVIs.</li>
+        <li>Built on the Deadlake data platform, turning match-level facts into an at-a-glance realtime view.</li>
+      </ul>
+    </div>
   </div>
 </section>
