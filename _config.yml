@@ -3,17 +3,15 @@ title: Thomas Pedbereznak
 description: >
   A personal website for Thomas Pedbereznak (Tom Ped).
 baseurl: ""
-permalink: /404.html
-url: "http://tomped.com"
+url: "https://www.tomped.com"
 linkedin_id: tpedbereznak
 github_username: TomPed
 
 collections:
-  - work
+  sites:
+    output: false
 
 sass:
     style: compressed
 
 markdown: kramdown
-
-include: ["js/highlight.pack.js"]

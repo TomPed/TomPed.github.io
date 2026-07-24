@@ -1,11 +1,12 @@
+@use "shared" as *;
+
 /**
  * Site header
  */
 .site-header {
   min-height: 56px;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  // NOTE: sticky positioning is defined in _base.scss; don't set `position` here
+  // or it overrides the sticky header (this partial is imported after _base).
 }
 
 .site-title {
@@ -43,7 +44,7 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: $spacing-unit / 2;
+    right: $spacing-unit * 0.5;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -100,7 +101,7 @@
 
 .footer-heading {
   font-size: 18px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit * 0.5;
 }
 
 .contact-list,
@@ -112,14 +113,14 @@
 .footer-col-wrapper {
   font-size: 15px;
   color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+  margin-left: -$spacing-unit * 0.5;
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  margin-bottom: $spacing-unit * 0.5;
+  padding-left: $spacing-unit * 0.5;
 }
 
 .footer-col-1 {
@@ -163,6 +164,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  overflow-x: clip;   // horizontal-overflow guard here (not on <body>) so the sticky header still works
 }
 
 .page-heading {

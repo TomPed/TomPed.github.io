@@ -1,0 +1,118 @@
+---
+layout: resume
+title: resume
+---
+
+<pre class="code"><code><span class="k">const</span> me = {
+  name: <span class="s">'Thomas Pedbereznak'</span>,
+  role: <span class="s">'Senior Software Engineer'</span>,
+  age: <span class="n">30</span>,
+  location: <span class="s">'Seattle, WA'</span>,
+  education: <span class="s">'BS Computer Science — Northeastern (magna cum laude)'</span>,
+  focus: [<span class="s">'data platforms'</span>, <span class="s">'developer experience'</span>],
+  status: <span class="s">'open to new roles'</span>
+}</code></pre>
+
+<section class="rune spine">
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">summary</span><span class="paren">()</span></p>
+  <div class="rune-body card">
+    <p>
+      Senior software engineer with 6+ years in enterprise software, focused on data platforms and
+      developer experience. I've led a seven-figure data-lake migration, shipped internal tools used
+      by 100+ people, and tuned Spark pipelines from hours to minutes — balancing hands-on
+      engineering with mentorship and clear stakeholder communication.
+    </p>
+  </div>
+</section>
+
+<section class="rune spine">
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">skills</span><span class="paren">()</span></p>
+
+  <div class="skills-grid card">
+    <div class="skill-group">
+      <h4 class="skill-title">Programming</h4>
+      <div class="tags">
+        <span class="tag">Scala</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4 class="skill-title">Big Data &amp; Cloud</h4>
+      <div class="tags">
+        <span class="tag">Spark</span><span class="tag">Apache Iceberg</span><span class="tag">AWS S3</span><span class="tag">EMR</span><span class="tag">Glue</span><span class="tag">Lambda</span><span class="tag">IAM</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4 class="skill-title">Testing &amp; DevOps</h4>
+      <div class="tags">
+        <span class="tag">CI/CD</span><span class="tag">pytest</span><span class="tag">ScalaTest</span><span class="tag">Terraform</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rune spine">
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">experience</span><span class="paren">()</span></p>
+  <p class="exp-note">
+    Full history in my <a href="{{ site.baseurl }}/assets/resume.pdf" download>résumé&nbsp;↓</a> — below is a summary of key points.
+  </p>
+
+  <div class="highlights card">
+    <div class="hl-item">
+      <span class="hl-tag">Enterprise · Intuit</span>
+      <p>Led the Vertica → S3 data-lake migration — saved seven figures with data parity and zero downtime.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Data · Intuit</span>
+      <p>Owned 5+ Spark/EMR pipelines and built a TurboTax abandonment pipeline surfacing user drop-off.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Tooling · Intuit</span>
+      <p>Shipped the CPA Tool (Electron) to 100+ users with zero P0/P1s, and built Testable for secure test data.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">DevEx · Intuit</span>
+      <p>Enhanced DBDeploy with dataset-level deployments and standardized CI/CD across projects.</p>
+    </div>
+    <div class="hl-item">
+      <span class="hl-tag">Leadership · Intuit</span>
+      <p>Mentored engineers and drove Spark performance wins, cutting job runtimes from hours to minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rune spine">
+  <p class="me-call"><span class="obj">me</span>.<span class="fn">relatedWork</span><span class="paren">()</span></p>
+
+  <div class="exp-entry card">
+    <div class="exp-meta">
+      <h3 class="exp-company">Deadlake</h3>
+      <ul class="exp-roles">
+        <li>Data Engineering <span class="exp-date">2025 – Present</span></li>
+      </ul>
+    </div>
+    <div class="exp-body">
+      <ul class="exp-bullets">
+        <li>Built a data lakehouse for Deadlock (a competitive team game) using Scala, Spark, and Apache Iceberg on AWS S3/Glue.</li>
+        <li>Designed typed ETL pipelines with incremental upserts, partitioning, and watermark tracking for reliable reprocessing via Iceberg metadata.</li>
+        <li>Optimized performance through Spark tuning, partition pruning, and broadcast joins.</li>
+        <li>Managed infrastructure as code with Terraform (S3 buckets, IAM roles, Glue jobs), enabling hero- and item-level dashboards from match-level facts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-entry card">
+    <div class="exp-meta">
+      <h3 class="exp-company">DeadStats</h3>
+      <ul class="exp-roles">
+        <li>Real-time analytics <span class="exp-date">2025 – Present</span></li>
+      </ul>
+    </div>
+    <div class="exp-body">
+      <ul class="exp-bullets">
+        <li>Real-time display of key value indicators for a competitive game, updating live as matches unfold.</li>
+        <li>Live outcome / win-probability predictions surfaced alongside the KVIs.</li>
+        <li>Built on the Deadlake data platform, turning match-level facts into an at-a-glance realtime view.</li>
+      </ul>
+    </div>
+  </div>
+</section>

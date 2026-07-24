@@ -1,0 +1,73 @@
+---
+layout: studio
+title: studio
+---
+
+<section class="studio-hero">
+  <p class="hero-comment">// websites for small businesses</p>
+  <h1 class="hero-title">A website that <span class="accent">wins you customers</span> — built fast, built right.</h1>
+  <p class="hero-sub">
+    I design and build clean, fast, mobile-first websites for local and small businesses.
+    No bloated page-builders, no monthly lock-in — just a site that loads quick, looks sharp,
+    and turns visitors into calls, bookings, and orders.
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="mailto:tom@tomped.com?subject=Website%20project">Start a project →</a>
+    <a class="btn btn-ghost" href="#work">See recent work</a>
+  </div>
+</section>
+
+<section class="studio-section spine" id="process">
+  <h2 class="section-heading">How it works</h2>
+  <ol class="process">
+    <li class="process-step card">
+      <span class="step-num">01</span>
+      <h3>We talk</h3>
+      <p>A quick call to understand your business, your customers, and what the site needs to do.</p>
+    </li>
+    <li class="process-step card">
+      <span class="step-num">02</span>
+      <h3>I build</h3>
+      <p>You get a clean, fast, mobile-first site — copy, layout, and the details handled. Usually in days, not months.</p>
+    </li>
+    <li class="process-step card">
+      <span class="step-num">03</span>
+      <h3>You launch</h3>
+      <p>We review together, tweak, and go live. I make sure it's easy for customers to find you and reach you.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="studio-section" id="work">
+  <h2 class="section-heading">Recent work</h2>
+  <div class="site-gallery">
+    {% for item in site.sites %}
+    {% capture card_inner %}
+      <div class="site-thumb">
+        {% if item.image and item.image != "" %}
+          <img src="{{ item.image | prepend: site.baseurl }}" alt="{{ item.title }}">
+        {% else %}
+          <span class="thumb-mark">{{ item.title | slice: 0 }}</span>
+        {% endif %}
+        {% if item.soon %}<span class="soon-ribbon">Coming soon</span>{% endif %}
+        {% if item.tag %}<span class="site-tag">{{ item.tag }}</span>{% endif %}
+      </div>
+      <div class="site-meta">
+        <h3 class="site-name">{{ item.title }}</h3>
+        {{ item.content }}
+      </div>
+    {% endcapture %}
+    {% if item.soon %}
+    <div class="site-card card is-soon">{{ card_inner }}</div>
+    {% else %}
+    <a class="site-card card" href="{{ item.link }}">{{ card_inner }}</a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="studio-cta card">
+  <h2 class="cta-title">Need a site that pulls its weight?</h2>
+  <p class="cta-sub">Tell me about your business and what you're after. I'll reply within a day.</p>
+  <a class="btn btn-primary" href="mailto:tom@tomped.com?subject=Website%20project">Email tom@tomped.com →</a>
+</section>

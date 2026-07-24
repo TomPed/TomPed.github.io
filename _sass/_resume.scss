@@ -1,0 +1,179 @@
+@use "shared" as *;
+
+/* Resume side — career / hire-me. Pseudo-code (me.method()) voice. */
+
+/* Pseudo-code section heading: me.experience() */
+.me-call {
+  font-size: 22px;
+  margin-bottom: $spacing-unit * 0.5;
+
+  .obj   { color: $text-color; }
+  .fn    { color: $dracula-green; font-weight: bold; }
+  .paren { color: $dracula-comment; }
+}
+
+/* A "rune" = one console.log section: label + raised body */
+.rune {
+  margin-bottom: $spacing-unit * 1.5;
+
+  &.spine { @extend %spine; }
+
+  .rune-body {
+    padding: $spacing-unit;
+
+    p:last-child { margin-bottom: 0; }
+  }
+
+  // the const me = {...} object sits raised too
+  > pre:first-child { margin-bottom: $spacing-unit * 0.5; }
+}
+
+.card { @extend %card; }
+
+/* Experience intro note: link to the full résumé */
+.exp-note {
+  color: $dracula-comment;
+  margin-bottom: $spacing-unit * 0.5;
+
+  a { color: $dracula-green; text-decoration: none; }
+  a:visited { color: $dracula-green; }
+  a:hover { color: $text-color; }
+}
+
+/* Flat "key points" highlights — tag + one-line statement */
+.highlights {
+  padding: $spacing-unit;
+
+  .hl-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: $spacing-unit * 0.5;
+    align-items: baseline;
+    padding: 12px 0;
+
+    & + .hl-item { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+
+    @include media-query($on-laptop) {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    p { margin: 0; color: #d7d7e0; line-height: 1.5; }
+  }
+
+  .hl-tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: $dracula-current;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: $dracula-cyan;
+    white-space: nowrap;
+  }
+}
+
+/* Experience / Related-work entry — two-column résumé style */
+.exp-entry {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) 1fr;
+  gap: $spacing-unit;
+  padding: $spacing-unit;
+  margin-bottom: $spacing-unit;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: 1fr;
+    gap: $spacing-unit * 0.5;
+  }
+}
+
+.exp-meta {
+  .exp-company {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  .exp-roles {
+    list-style: none;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .exp-date {
+      display: block;
+      font-size: 14px;
+      color: $dracula-comment;
+    }
+  }
+}
+
+.exp-body {
+  .exp-group-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $dracula-cyan;
+    margin-bottom: 8px;
+
+    &:not(:first-child) { margin-top: $spacing-unit * 0.5; }
+  }
+
+  .exp-bullets {
+    list-style: none;
+    margin: 0 0 $spacing-unit * 0.5;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: #d7d7e0;
+      line-height: 1.5;
+
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: $brand-color;
+      }
+    }
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+/* Technical skills — grouped tag pills */
+.skills-grid {
+  padding: $spacing-unit;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-unit;
+
+  @include media-query($on-laptop) { grid-template-columns: 1fr; gap: $spacing-unit * 0.5; }
+
+  .skill-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: $dracula-cyan;
+    margin-bottom: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: $dracula-current;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: $text-color;
+    white-space: nowrap;
+  }
+}

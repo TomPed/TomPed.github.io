@@ -1,11 +1,31 @@
+@use "shared" as *;
+
 /**
  * Reset some basic elements
  */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
+}
+
+/* Long code / tree blocks scroll within themselves instead of the page */
+pre {
+  overflow-x: auto;
+}
+
+/* Break overly long words rather than overflow the viewport */
+p, h1, h2, h3, li, a {
+  overflow-wrap: break-word;
 }
 
 /**
@@ -28,9 +48,8 @@ body {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+ul, ol, dl, figure {
+  margin-bottom: $spacing-unit * 0.5;
 }
 
 /**
@@ -94,7 +113,7 @@ a {
   text-decoration: underline;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: $brand-color-dark;
   }
 
   &:hover {
@@ -118,18 +137,77 @@ a {
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit * 0.5;
+    padding-left: $spacing-unit * 0.5;
   }
 }
 
 /**
- * Clearfix
+ * Section header + breadcrumb (shared by resume/ and studio/)
  */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($background-color, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: $spacing-unit * 0.6;
+}
+
+.crumb {
+  font-size: 14px;
+  margin-bottom: 3px;
+
+  .crumb-link {
+    text-decoration: none;
+
+    .crumb-cmd  { color: $dracula-green; }
+    .crumb-path { color: $dracula-comment; }
+
+    &:hover .crumb-cmd,
+    &:hover .crumb-path { color: $text-color; }
+  }
+}
+
+/* Brand bar (shared by resume/ and studio/): wordmark + a CTA link */
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-wordmark {
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-color;
+  text-decoration: none;
+
+  .brand-dir { color: $brand-color; }
+  &:hover { color: $text-color; }
+}
+
+.brand-cta-link {
+  color: $dracula-green;
+  text-decoration: none;
+  font-size: 15px;
+  &:visited { color: $dracula-green; }   // don't inherit the darkened a:visited brand color
+  &:hover { color: $text-color; }
+}
+
+/**
+ * Hand-colored code tokens (Dracula) — replaces highlight.js.
+ * Used for the `const me = { … }` blocks.
+ */
+.code {
+  .k { color: $dracula-pink;   font-weight: bold; }  // keyword
+  .s { color: $dracula-yellow; }                     // string
+  .n { color: $brand-color; }                        // number / literal
 }
 
 /**

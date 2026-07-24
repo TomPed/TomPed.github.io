@@ -1,8 +1,19 @@
 ---
-layout: default
+layout: landing
+title: 404
 ---
 
-<pre><code class="javascript">{
-  status: '404',
-  message: 'Not found'
-}</code></pre>
+<section class="terminal">
+  <div class="terminal-bar">
+    <span class="tb-dot tb-red"></span>
+    <span class="tb-dot tb-yellow"></span>
+    <span class="tb-dot tb-green"></span>
+    <span class="terminal-title">tom@tomped: ~/tomped — bash</span>
+  </div>
+
+  <div class="terminal-body">
+    <p class="prompt-line"><span class="prompt">tom@tomped</span><span class="path">~/tomped</span><span class="sigil">$</span> cat &lt;page&gt;</p>
+    <pre class="code"><code><span class="k">throw new</span> Error(<span class="s">'404 — page not found'</span>)</code></pre>
+    <p class="tree-summary"><a href="{{ site.baseurl }}/">cd /tomped</a> to head home</p>
+  </div>
+</section>

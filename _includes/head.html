@@ -7,7 +7,8 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <script src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+  <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 </head>
