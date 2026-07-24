@@ -50,25 +50,31 @@ Supporting pieces:
 - **Layouts** (`_layouts/`): `landing.html`, `resume.html`, `studio.html`. All include
   `head.html` + `footer.html`; resume/studio also include `resume-header.html` / `studio-header.html`
   (a `cd /tomped` breadcrumb back to the landing + a brand bar).
-- **Collections** (`_config.yml`): `sites` (studio gallery — `_sites/N-*.md`, front matter
-  `title`/`link`/`image`/`tag`, iterated on the studio page) and `work` (legacy personal projects
-  in `_work/`, currently `output: false` and not rendered — kept for possible reuse). Numeric
-  filename prefixes control order.
+- **Collection** (`_config.yml`): `sites` — the studio gallery. Each `_sites/N-*.md` has front
+  matter `title`/`link`/`image`/`tag`, plus optional `soon: true` to render a dimmed "Coming soon"
+  card (no link). Iterated on the studio page; numeric filename prefixes control order.
 - `work/index.html` is a redirect stub preserving the old `/work/` URL → `/resume/`.
 
-## Styling (`_sass/` + `css/main.scss`) — Sass module system
+## Styling (`_sass/` + `css/main.scss`)
 
-- `_sass/_shared.scss` is the hub: all variables, the `media-query` mixin, and the shared
-  placeholders (`%card`, `%card-lift`, `%spine`, `%clearfix`). Every partial starts with
-  `@use "shared" as *;`, and `css/main.scss` pulls the partials together with `@use` (modern
-  module system — **no `@import`**, so the build is deprecation-warning free). Only `main.scss`
-  carries front matter.
+- `css/main.scss` defines all variables + the `media-query` mixin, then `@import`s the partials
+  (`base`, `footer`, `layout`, `landing`, `resume`, `studio`). Shared placeholders (`%card`,
+  `%card-lift`, `%spine`, `%clearfix`) live in `_base.scss` and are `@extend`ed by the others.
+  Only `main.scss` carries front matter.
+- **⚠️ GitHub Pages builds with libsass (Jekyll 3.9), which does NOT support the Dart Sass module
+  system.** Never use `@use` / `@forward` (or `color.adjust`, `math.div`, `sass:*` modules): they
+  compile locally on Jekyll 4 / Dart Sass but ship **uncompiled** on Pages — `main.css` becomes
+  literal `@use "base";…` and the live site loses all CSS (this happened once — see git history).
+  Stick to `@import` + global variables + `lighten()`/`darken()`; use `* 0.5` instead of `/`
+  division. The Dart Sass **deprecation warnings** shown locally (`@import`, `lighten`, `/`) are
+  cosmetic — ignore them; they don't affect the libsass prod build. (To use modern Sass safely
+  you'd switch Pages to a GitHub Actions build with Jekyll 4 + Dart Sass — a possible future
+  change, not set up.)
 - Palette is **Dracula** (`$background-color: #282a36`, `$brand-color: #bd93f9`,
   `$text-color: #f8f8f2`); base font is monospace. Cards are raised via `%card` + soft shadows;
   sections get a quiet vertical accent via `%spine`. The section header is `position: sticky`
-  (defined once in `_base.scss` — don't set `position` on `.site-header` elsewhere or it overrides).
-- Avoid Sass `/` division (deprecated) — use `* 0.5` etc. Use `color.adjust(...)`, not
-  `lighten()`/`darken()`.
+  (defined once in `_base.scss` — don't set `position` on `.site-header` elsewhere), and
+  `html { scroll-padding-top }` offsets `#anchor` jumps so they clear the sticky header.
 
 ## Content convention
 
