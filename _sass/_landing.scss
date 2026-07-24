@@ -1,3 +1,5 @@
+@use "shared" as *;
+
 /* Landing — terminal tree chooser */
 
 body.landing {
@@ -54,7 +56,7 @@ body.landing {
 }
 
 .prompt-line {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit * 0.5;
 
   .prompt { color: $dracula-green; }
   .path   { color: $dracula-cyan; margin: 0 0.5ch; }
@@ -62,7 +64,7 @@ body.landing {
 }
 
 .tree {
-  margin: ($spacing-unit / 2) 0 $spacing-unit;
+  margin: ($spacing-unit * 0.5) 0 $spacing-unit;
   overflow-x: auto;
 
   // "tomped/" root — large but light (folders stay bold, so they still dominate)
@@ -103,6 +105,6 @@ body.landing {
 }
 
 @include media-query($on-palm) {
-  .terminal .terminal-body { font-size: 16px; padding: $spacing-unit / 2; }
+  .terminal .terminal-body { font-size: 16px; padding: $spacing-unit * 0.5; }
   .tree .tree-row .comment { display: none; }  // keep the tree tidy on small screens
 }

@@ -1,5 +1,4 @@
 ---
-layout: work
 title: Viibe
 link: https://viibe.fm/
 ---

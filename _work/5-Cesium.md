@@ -1,5 +1,4 @@
 ---
-layout: work
 title: Cesium
 link: http://cesiumjs.org/
 ---

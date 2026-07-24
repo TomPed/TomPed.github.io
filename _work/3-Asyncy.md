@@ -1,5 +1,4 @@
 ---
-layout: work
 title: Asyncy
 link: https://asyncy.com
 ---

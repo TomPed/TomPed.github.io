@@ -1,5 +1,4 @@
 ---
-layout: work
 title: Cesium Mobile
 link: https://github.com/TomPed/Cesium-Mobile
 ---

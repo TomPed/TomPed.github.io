@@ -1,18 +1,11 @@
-/* Resume side — career / hire-me. Keeps the terminal / console.log voice. */
+@use "shared" as *;
 
-body.resume {
-  // console.log(...) labels that introduce each section
-  .console-log {
-    background: transparent;
-    padding: 0;
-    font-size: 20px;
-  }
-}
+/* Resume side — career / hire-me. Pseudo-code (me.method()) voice. */
 
 /* Pseudo-code section heading: me.experience() */
 .me-call {
   font-size: 22px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit * 0.5;
 
   .obj   { color: $text-color; }
   .fn    { color: $dracula-green; font-weight: bold; }
@@ -31,50 +24,16 @@ body.resume {
     p:last-child { margin-bottom: 0; }
   }
 
-  .rune-lead {
-    color: $dracula-comment;
-    margin-bottom: $spacing-unit / 2;
-  }
-
   // the const me = {...} object sits raised too
-  > pre:first-child { margin-bottom: $spacing-unit / 2; }
+  > pre:first-child { margin-bottom: $spacing-unit * 0.5; }
 }
 
 .card { @extend %card; }
 
-/* Project cards */
-body.resume {
-  .project-list {
-    margin-left: 0;
-    list-style: none;
-  }
-
-  .project-card {
-    @extend %card-lift;
-    padding: $spacing-unit;
-    margin-bottom: $spacing-unit;
-
-    .project-title {
-      font-size: 38px;
-      line-height: 1.05;
-      margin-bottom: $spacing-unit / 2;
-
-      a { text-decoration: none; }
-      a:hover { color: $text-color; }
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    @include media-query($on-laptop) {
-      .project-title { font-size: 30px; }
-    }
-  }
-}
-
 /* Experience intro note: link to the full résumé */
 .exp-note {
   color: $dracula-comment;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit * 0.5;
 
   a { color: $dracula-green; text-decoration: none; }
   a:visited { color: $dracula-green; }
@@ -88,7 +47,7 @@ body.resume {
   .hl-item {
     display: grid;
     grid-template-columns: 160px 1fr;
-    gap: $spacing-unit / 2;
+    gap: $spacing-unit * 0.5;
     align-items: baseline;
     padding: 12px 0;
 
@@ -124,7 +83,7 @@ body.resume {
 
   @include media-query($on-laptop) {
     grid-template-columns: 1fr;
-    gap: $spacing-unit / 2;
+    gap: $spacing-unit * 0.5;
   }
 }
 
@@ -133,7 +92,7 @@ body.resume {
     font-size: 30px;
     font-weight: bold;
     line-height: 1.1;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit * 0.5;
   }
 
   .exp-roles {
@@ -160,12 +119,12 @@ body.resume {
     color: $dracula-cyan;
     margin-bottom: 8px;
 
-    &:not(:first-child) { margin-top: $spacing-unit / 2; }
+    &:not(:first-child) { margin-top: $spacing-unit * 0.5; }
   }
 
   .exp-bullets {
     list-style: none;
-    margin: 0 0 $spacing-unit / 2;
+    margin: 0 0 $spacing-unit * 0.5;
 
     li {
       position: relative;
@@ -193,7 +152,7 @@ body.resume {
   grid-template-columns: repeat(3, 1fr);
   gap: $spacing-unit;
 
-  @include media-query($on-laptop) { grid-template-columns: 1fr; gap: $spacing-unit / 2; }
+  @include media-query($on-laptop) { grid-template-columns: 1fr; gap: $spacing-unit * 0.5; }
 
   .skill-title {
     font-size: 16px;

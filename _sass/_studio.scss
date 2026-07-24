@@ -1,3 +1,5 @@
+@use "shared" as *;
+
 /* Studio side — freelance / for clients.
    Same Dracula bones, but a lighter, product-landing structure and voice. */
 
@@ -34,13 +36,13 @@ body.studio {
 
   .hero-comment {
     color: $dracula-comment;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit * 0.5;
   }
   .hero-title {
     font-size: 56px;
     line-height: 1.1;
     font-weight: bold;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit * 0.5;
     .accent { color: $brand-color; }
 
     @include media-query($on-laptop) { font-size: 40px; }
@@ -73,7 +75,7 @@ body.studio {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $spacing-unit / 2;
+  gap: $spacing-unit * 0.5;
 
   @include media-query($on-laptop) { grid-template-columns: 1fr; }
 
@@ -97,7 +99,7 @@ body.studio {
 .site-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $spacing-unit / 2;
+  gap: $spacing-unit * 0.5;
 
   @include media-query($on-laptop) { grid-template-columns: repeat(2, 1fr); }
   @include media-query($on-palm)   { grid-template-columns: 1fr; }
@@ -111,7 +113,7 @@ body.studio {
 
   .site-thumb {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1.6;
     background: linear-gradient(135deg, $dracula-current, #21222c);
     display: flex;
     align-items: center;
@@ -137,7 +139,7 @@ body.studio {
   }
 
   .site-meta {
-    padding: $spacing-unit / 2 $spacing-unit;
+    padding: $spacing-unit * 0.5 $spacing-unit;
     .site-name { font-size: 22px; font-weight: bold; margin-bottom: 6px; color: $text-color; }
     p { font-size: 16px; color: #cfcfda; margin-bottom: 0; }
   }
