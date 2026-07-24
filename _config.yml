@@ -8,8 +8,6 @@ linkedin_id: tpedbereznak
 github_username: TomPed
 
 collections:
-  work:
-    output: false
   sites:
     output: false
 
