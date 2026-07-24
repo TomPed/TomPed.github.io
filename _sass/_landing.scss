@@ -75,7 +75,7 @@ body.landing {
     padding: 12px 14px;                   // roomy, obvious click targets
     border-radius: 8px;
     line-height: 1.4;
-    transition: background 0.15s ease, transform 0.15s ease;
+    transition: background 0.15s ease, padding 0.15s ease;
 
     // the folder name is the primary click target — ~1.5x the body text
     .dir     { color: $brand-color; font-weight: 700; font-size: 1.5em; }
@@ -85,7 +85,11 @@ body.landing {
     &:hover,
     &:focus {
       background: rgba($brand-color, 0.12);
-      transform: translateX(4px);
+      // nudge the row right without a transform — a transform would poke past the
+      // scroll container (pre.tree) and pop a horizontal scrollbar on Linux/Windows.
+      // Left/right padding swap keeps the box width identical.
+      padding-left: 18px;
+      padding-right: 10px;
       outline: none;
 
       .dir     { color: $text-color; text-decoration: underline; }
