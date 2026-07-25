@@ -147,7 +147,7 @@
 .skills-grid {
   padding: $spacing-unit;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: $spacing-unit;
 
   @include media-query($on-laptop) { grid-template-columns: 1fr; gap: $spacing-unit * 0.5; }

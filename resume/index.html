@@ -6,7 +6,6 @@ title: resume
 <pre class="code"><code><span class="k">const</span> me = {
   name: <span class="s">'Thomas Pedbereznak'</span>,
   role: <span class="s">'Senior Software Engineer'</span>,
-  age: <span class="n">30</span>,
   location: <span class="s">'Seattle, WA'</span>,
   education: <span class="s">'BS Computer Science — Northeastern (magna cum laude)'</span>,
   focus: [<span class="s">'data platforms'</span>, <span class="s">'developer experience'</span>],
@@ -17,7 +16,7 @@ title: resume
   <p class="me-call"><span class="obj">me</span>.<span class="fn">summary</span><span class="paren">()</span></p>
   <div class="rune-body card">
     <p>
-      Senior software engineer with 6+ years in enterprise software, focused on data platforms and
+      Senior software engineer with 5+ years in enterprise software, focused on data platforms and
       developer experience. I've led a seven-figure data-lake migration, shipped internal tools used
       by 100+ people, and tuned Spark pipelines from hours to minutes — balancing hands-on
       engineering with mentorship and clear stakeholder communication.
@@ -45,6 +44,12 @@ title: resume
       <h4 class="skill-title">Testing &amp; DevOps</h4>
       <div class="tags">
         <span class="tag">CI/CD</span><span class="tag">pytest</span><span class="tag">ScalaTest</span><span class="tag">Terraform</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4 class="skill-title">Web &amp; Full-Stack</h4>
+      <div class="tags">
+        <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">WebSockets</span><span class="tag">Stripe</span><span class="tag">Vite</span><span class="tag">Cloudflare Workers</span>
       </div>
     </div>
   </div>
@@ -82,6 +87,22 @@ title: resume
 
 <section class="rune spine">
   <p class="me-call"><span class="obj">me</span>.<span class="fn">relatedWork</span><span class="paren">()</span></p>
+
+  <div class="exp-entry card">
+    <div class="exp-meta">
+      <h3 class="exp-company">GnatsKnots</h3>
+      <ul class="exp-roles">
+        <li>Full-stack e-commerce <span class="exp-date">2026</span></li>
+      </ul>
+    </div>
+    <div class="exp-body">
+      <ul class="exp-bullets">
+        <li>Designed and shipped a full online storefront for a handmade knit &amp; crochet maker — React&nbsp;19 + Vite front end on a Cloudflare Workers backend, live on a custom domain at <a href="https://gnatsknots.com">gnatsknots.com</a>.</li>
+        <li>Used Stripe as both payment processor and product database: the catalog reads live Stripe Products, checkout re-verifies stock server-side, and a signed webhook decrements inventory so items flag sold-out automatically.</li>
+        <li>Owned the whole delivery path solo — brand and UI, cart logic, a custom-order inquiry flow, security headers on every response, unit tests over the cart and worker logic, and deploys to production.</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="exp-entry card">
     <div class="exp-meta">
