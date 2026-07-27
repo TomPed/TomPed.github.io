@@ -1,5 +1,5 @@
 ---
-title: GnatsKnots
+title: gnatsknots
 link: https://gnatsknots.com
 image: /assets/sites/gnatsknots.png
 tag: Online store
