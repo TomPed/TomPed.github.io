@@ -1,9 +1,8 @@
 ---
-title: Restaurant Demo
-link: "#"
-image: ""
+title: The Blue Comet Diner & Lounge
+link: https://www.tomped.com/restaurant-demo/
+image: /assets/sites/restaurant.png
 tag: Restaurant · demo
-soon: true
 ---
-A mobile-first one-pager for a neighborhood restaurant — menu, hours, location, and a
-tap-to-reserve button. *(demo — Tom to add the live GitHub Pages link + real name)*
+A mobile-first five-page site for a mid-century diner — menu, hours, events, location, and a
+tap-to-call button on every page.
