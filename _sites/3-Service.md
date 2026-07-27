@@ -1,9 +1,8 @@
 ---
-title: GreenLeaf Landscaping
-link: "#"
-image: ""
+title: Thistlewood Landscape Co.
+link: https://www.tomped.com/landscaping-demo/
+image: /assets/sites/landscaping.png
 tag: Local service · demo
-soon: true
 ---
-A lead-generating one-pager for a local trade — services, service area, reviews, and a
-big tap-to-call button that puts the phone number front and center.
+A lead-generating four-page site for a local trade — services, service area, sample customer
+feedback, and a big tap-to-call button that puts the phone number front and center.
